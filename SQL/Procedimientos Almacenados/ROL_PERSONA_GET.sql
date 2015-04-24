@@ -1,0 +1,13 @@
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS ROL_PERSONA_GET$$
+
+CREATE PROCEDURE `ROL_PERSONA_GET`(
+ P_opcion INT
+)
+BEGIN
+	SELECT
+		RP.id_rol_persona,
+		RP.descripcion AS Rol
+		FROM tm_rol_persona RP;
+END$$
